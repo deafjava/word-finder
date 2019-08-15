@@ -14,3 +14,135 @@
 18:57:31.717 [main] INFO  org.eclipse.jetty.server.Server  - Started @7441ms
 18:57:44.121 [qtp306956794-16] INFO  io.pedestal.http  - {:msg "GET /", :line 80}
 18:57:50.037 [qtp306956794-13] INFO  io.pedestal.http  - {:msg "GET /json", :line 80}
+19:57:47.674 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @7337ms to org.eclipse.jetty.util.log.Slf4jLog
+19:57:47.825 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_201-b09
+19:57:47.853 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@79715834{/,null,AVAILABLE}
+19:57:47.865 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@659b0c20{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+19:57:47.865 [main] INFO  org.eclipse.jetty.server.Server  - Started @7529ms
+19:58:01.167 [qtp161122889-16] INFO  io.pedestal.http  - {:msg "GET /json", :line 80}
+19:58:28.954 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @7319ms to org.eclipse.jetty.util.log.Slf4jLog
+19:58:29.095 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_201-b09
+19:58:29.121 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@5323c6de{/,null,AVAILABLE}
+19:58:29.133 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@1bd7dd4a{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+19:58:29.133 [main] INFO  org.eclipse.jetty.server.Server  - Started @7499ms
+19:58:34.671 [qtp1561140816-16] INFO  io.pedestal.http  - {:msg "GET /json", :line 80}
+20:14:00.490 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @7272ms to org.eclipse.jetty.util.log.Slf4jLog
+20:14:00.629 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_201-b09
+20:14:00.655 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@2131229e{/,null,AVAILABLE}
+20:14:00.667 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@40b0436e{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+20:14:00.668 [main] INFO  org.eclipse.jetty.server.Server  - Started @7451ms
+20:14:04.347 [qtp747473204-16] INFO  io.pedestal.http  - {:msg "GET /json", :line 80}
+20:14:04.389 [qtp747473204-16] ERROR i.p.http.impl.servlet-interceptor  - {:msg "error-ring-response triggered", :context {:response nil, :io.pedestal.interceptor.chain/stack (#Interceptor{:name :io.pedestal.http.impl.servlet-interceptor/stylobate} #Interceptor{:name :io.pedestal.http.impl.servlet-interceptor/terminator-injector}), :request {:protocol "HTTP/1.1", :async-supported? true, :remote-addr "127.0.0.1", :servlet-response #object[org.eclipse.jetty.server.Response 0xb0f2289 "HTTP/1.1 200 \nDate: Thu, 15 Aug 2019 23:14:04 GMT\r\n\r\n"], :servlet #object[io.pedestal.http.servlet.FnServlet 0x49e02575 "io.pedestal.http.servlet.FnServlet@49e02575"], :headers {"host" "localhost:8080", "user-agent" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0", "cookie" "crisp-client%2Fsession%2Fed6d22fe-d39e-4d34-8b60-03614a7c105a=session_49324b23-46c0-41e9-827f-a487b090b5b7; _ga=GA1.1.89202438.1553720876; crisp-client%2Fsession%2F611fa81d-6a20-4dd8-beef-f83a3b6ac2f2=session_6bc9297f-c4ac-48e6-9f8b-584d8b2d6252; __zlcmid=t1iLXRBHRMkzkK; oauth-token-admin=YTg5ZDk5ODAtODM3My00MDQzLTljNTUtZDZjZjYxOTRlYWFmYWFhNmFjYzEtMjE0My00YzAyLTg2ZGYtNDA1ZTFkYmNiNmUw; _hjid=f78a4665-2d0b-435e-8ffe-9b92d9cff96e; oauth-token=Yzg2MGNhZDYtYThhMi00ZDgyLWIyOGUtYTI0ZmJjNjA4ODUzMjJiMjFmZDMtOTAyNS00ZGJkLWI2MGItY2EzMmNkYzUwZTgw; mp_db1b687c83565ccc5c2efb0be133b7ae_mixpanel=%7B%22distinct_id%22%3A%20%2216b9f3ea030251-0e2aa6507824178-70226752-100200-16b9f3ea031194%22%2C%22%24device_id%22%3A%20%2216b9f3ea030251-0e2aa6507824178-70226752-100200-16b9f3ea031194%22%2C%22%24initial_referrer%22%3A%20%22http%3A%2F%2Flocalhost%3A7000%2Fsistema%2Flogin-admin%2F%3Fcnpj%3D21674124000122%22%2C%22%24initial_referring_domain%22%3A%20%22localhost%3A7000%22%7D", "connection" "keep-alive", "upgrade-insecure-requests" "1", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "accept-language" "en-US,en;q=0.5", "accept-encoding" "gzip, deflate", "cache-control" "max-age=0"}, :server-port 8080, :servlet-request #object[org.eclipse.jetty.server.Request 0xf1572ee "Request(GET //localhost:8080/json)@f1572ee"], :path-info "/json", :url-for #object[clojure.lang.Delay 0x615a68b1 {:status :pending, :val nil}], :uri "/json", :server-name "localhost", :query-string nil, :path-params [], :body #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x488efe6c "HttpInputOverHTTP@488efe6c[c=0,q=0,[0]=null,s=STREAM]"], :scheme :http, :request-method :get, :context-path ""}, :bindings {#'io.pedestal.http.route/*url-for* #object[clojure.lang.Delay 0x615a68b1 {:status :pending, :val nil}]}, :enter-async [#object[io.pedestal.http.impl.servlet_interceptor$start_servlet_async 0x2a9f404d "io.pedestal.http.impl.servlet_interceptor$start_servlet_async@2a9f404d"]], :io.pedestal.interceptor.chain/terminators (#object[io.pedestal.http.impl.servlet_interceptor$terminator_inject$fn__15751 0x776f39c6 "io.pedestal.http.impl.servlet_interceptor$terminator_inject$fn__15751@776f39c6"]), :servlet-response #object[org.eclipse.jetty.server.Response 0xb0f2289 "HTTP/1.1 200 \nDate: Thu, 15 Aug 2019 23:14:04 GMT\r\n\r\n"], :route {:path "/json", :method :get, :path-re #"/\Qjson\E", :path-parts ["json"], :interceptors [#Interceptor{:name :io.pedestal.http.body-params/body-params} #Interceptor{:name :io.pedestal.http/json-body} #Interceptor{:name }], :route-name :bras-cubas.service/get-json, :path-params [], :io.pedestal.http.route.prefix-tree/satisfies-constraints? #object[clojure.core$constantly$fn__5672 0x52f3e19a "clojure.core$constantly$fn__5672@52f3e19a"]}, :servlet #object[io.pedestal.http.servlet.FnServlet 0x49e02575 "io.pedestal.http.servlet.FnServlet@49e02575"], :servlet-request #object[org.eclipse.jetty.server.Request 0xf1572ee "Request(GET //localhost:8080/json)@f1572ee"], :url-for #object[clojure.lang.Delay 0x615a68b1 {:status :pending, :val nil}], :io.pedestal.interceptor.chain/execution-id 1, :servlet-config #object[org.eclipse.jetty.servlet.ServletHolder$Config 0xa25a288 "org.eclipse.jetty.servlet.ServletHolder$Config@a25a288"], :async? #object[io.pedestal.http.impl.servlet_interceptor$servlet_async_QMARK_ 0x3fab555f "io.pedestal.http.impl.servlet_interceptor$servlet_async_QMARK_@3fab555f"]}, :line 253}
+clojure.lang.ExceptionInfo: java.lang.ClassCastException in Interceptor  - java.lang.Integer cannot be cast to clojure.lang.IFn
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invokeStatic(chain.clj:35)
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invoke(chain.clj:32)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:57)
+	at io.pedestal.interceptor.chain$try_f.invoke(chain.clj:44)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invokeStatic(chain.clj:171)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invoke(chain.clj:146)
+	at io.pedestal.interceptor.chain$process_all$fn__10622.invoke(chain.clj:188)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:665)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1973)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1973)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at io.pedestal.interceptor.chain$process_all.invokeStatic(chain.clj:186)
+	at io.pedestal.interceptor.chain$process_all.invoke(chain.clj:182)
+	at io.pedestal.interceptor.chain$enter_all.invokeStatic(chain.clj:235)
+	at io.pedestal.interceptor.chain$enter_all.invoke(chain.clj:229)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:379)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:389)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.http.impl.servlet_interceptor$interceptor_service_fn$fn__15776.invoke(servlet_interceptor.clj:351)
+	at io.pedestal.http.servlet.FnServlet.service(servlet.clj:28)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:873)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:542)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1345)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:480)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1247)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:505)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:370)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:267)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:698)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:804)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: java.lang.Integer cannot be cast to clojure.lang.IFn
+	at bras_cubas.service$get_json.invokeStatic(service.clj:23)
+	at bras_cubas.service$get_json.invoke(service.clj:21)
+	at io.pedestal.interceptor$eval306$fn__307$fn__308.invoke(interceptor.clj:41)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:54)
+	... 39 common frames omitted
+20:14:04.390 [qtp747473204-16] INFO  i.p.http.impl.servlet-interceptor  - {:msg "sending error", :message "Internal server error: exception", :line 215}
+20:16:14.402 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @7206ms to org.eclipse.jetty.util.log.Slf4jLog
+20:16:14.554 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_201-b09
+20:16:14.579 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@2f67401{/,null,AVAILABLE}
+20:16:14.593 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@46b4819c{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+20:16:14.593 [main] INFO  org.eclipse.jetty.server.Server  - Started @7399ms
+20:16:19.386 [qtp588497553-16] INFO  io.pedestal.http  - {:msg "GET /json", :line 80}
+20:16:19.417 [qtp588497553-16] ERROR i.p.http.impl.servlet-interceptor  - {:msg "error-ring-response triggered", :context {:response nil, :io.pedestal.interceptor.chain/stack (#Interceptor{:name :io.pedestal.http.impl.servlet-interceptor/stylobate} #Interceptor{:name :io.pedestal.http.impl.servlet-interceptor/terminator-injector}), :request {:protocol "HTTP/1.1", :async-supported? true, :remote-addr "127.0.0.1", :servlet-response #object[org.eclipse.jetty.server.Response 0x73d8d55a "HTTP/1.1 200 \nDate: Thu, 15 Aug 2019 23:16:19 GMT\r\n\r\n"], :servlet #object[io.pedestal.http.servlet.FnServlet 0x2ae64af5 "io.pedestal.http.servlet.FnServlet@2ae64af5"], :headers {"host" "localhost:8080", "user-agent" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0", "cookie" "crisp-client%2Fsession%2Fed6d22fe-d39e-4d34-8b60-03614a7c105a=session_49324b23-46c0-41e9-827f-a487b090b5b7; _ga=GA1.1.89202438.1553720876; crisp-client%2Fsession%2F611fa81d-6a20-4dd8-beef-f83a3b6ac2f2=session_6bc9297f-c4ac-48e6-9f8b-584d8b2d6252; __zlcmid=t1iLXRBHRMkzkK; oauth-token-admin=YTg5ZDk5ODAtODM3My00MDQzLTljNTUtZDZjZjYxOTRlYWFmYWFhNmFjYzEtMjE0My00YzAyLTg2ZGYtNDA1ZTFkYmNiNmUw; _hjid=f78a4665-2d0b-435e-8ffe-9b92d9cff96e; oauth-token=Yzg2MGNhZDYtYThhMi00ZDgyLWIyOGUtYTI0ZmJjNjA4ODUzMjJiMjFmZDMtOTAyNS00ZGJkLWI2MGItY2EzMmNkYzUwZTgw; mp_db1b687c83565ccc5c2efb0be133b7ae_mixpanel=%7B%22distinct_id%22%3A%20%2216b9f3ea030251-0e2aa6507824178-70226752-100200-16b9f3ea031194%22%2C%22%24device_id%22%3A%20%2216b9f3ea030251-0e2aa6507824178-70226752-100200-16b9f3ea031194%22%2C%22%24initial_referrer%22%3A%20%22http%3A%2F%2Flocalhost%3A7000%2Fsistema%2Flogin-admin%2F%3Fcnpj%3D21674124000122%22%2C%22%24initial_referring_domain%22%3A%20%22localhost%3A7000%22%7D", "connection" "keep-alive", "upgrade-insecure-requests" "1", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "accept-language" "en-US,en;q=0.5", "accept-encoding" "gzip, deflate", "cache-control" "max-age=0"}, :server-port 8080, :servlet-request #object[org.eclipse.jetty.server.Request 0x1dd49305 "Request(GET //localhost:8080/json)@1dd49305"], :path-info "/json", :url-for #object[clojure.lang.Delay 0x131b957e {:status :pending, :val nil}], :uri "/json", :server-name "localhost", :query-string nil, :path-params [], :body #object[org.eclipse.jetty.server.HttpInputOverHTTP 0xb1b6353 "HttpInputOverHTTP@b1b6353[c=0,q=0,[0]=null,s=STREAM]"], :scheme :http, :request-method :get, :context-path ""}, :bindings {#'io.pedestal.http.route/*url-for* #object[clojure.lang.Delay 0x131b957e {:status :pending, :val nil}]}, :enter-async [#object[io.pedestal.http.impl.servlet_interceptor$start_servlet_async 0x5314f274 "io.pedestal.http.impl.servlet_interceptor$start_servlet_async@5314f274"]], :io.pedestal.interceptor.chain/terminators (#object[io.pedestal.http.impl.servlet_interceptor$terminator_inject$fn__15751 0x623688a8 "io.pedestal.http.impl.servlet_interceptor$terminator_inject$fn__15751@623688a8"]), :servlet-response #object[org.eclipse.jetty.server.Response 0x73d8d55a "HTTP/1.1 200 \nDate: Thu, 15 Aug 2019 23:16:19 GMT\r\n\r\n"], :route {:path "/json", :method :get, :path-re #"/\Qjson\E", :path-parts ["json"], :interceptors [#Interceptor{:name :io.pedestal.http.body-params/body-params} #Interceptor{:name :io.pedestal.http/html-body} #Interceptor{:name }], :route-name :bras-cubas.service/get-json, :path-params [], :io.pedestal.http.route.prefix-tree/satisfies-constraints? #object[clojure.core$constantly$fn__5672 0x569bdb11 "clojure.core$constantly$fn__5672@569bdb11"]}, :servlet #object[io.pedestal.http.servlet.FnServlet 0x2ae64af5 "io.pedestal.http.servlet.FnServlet@2ae64af5"], :servlet-request #object[org.eclipse.jetty.server.Request 0x1dd49305 "Request(GET //localhost:8080/json)@1dd49305"], :url-for #object[clojure.lang.Delay 0x131b957e {:status :pending, :val nil}], :io.pedestal.interceptor.chain/execution-id 1, :servlet-config #object[org.eclipse.jetty.servlet.ServletHolder$Config 0x6babd01e "org.eclipse.jetty.servlet.ServletHolder$Config@6babd01e"], :async? #object[io.pedestal.http.impl.servlet_interceptor$servlet_async_QMARK_ 0x4d0d61f "io.pedestal.http.impl.servlet_interceptor$servlet_async_QMARK_@4d0d61f"]}, :line 253}
+clojure.lang.ExceptionInfo: java.lang.ClassCastException in Interceptor  - java.lang.Integer cannot be cast to clojure.lang.IFn
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invokeStatic(chain.clj:35)
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invoke(chain.clj:32)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:57)
+	at io.pedestal.interceptor.chain$try_f.invoke(chain.clj:44)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invokeStatic(chain.clj:171)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invoke(chain.clj:146)
+	at io.pedestal.interceptor.chain$process_all$fn__10622.invoke(chain.clj:188)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:665)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1973)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1973)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at io.pedestal.interceptor.chain$process_all.invokeStatic(chain.clj:186)
+	at io.pedestal.interceptor.chain$process_all.invoke(chain.clj:182)
+	at io.pedestal.interceptor.chain$enter_all.invokeStatic(chain.clj:235)
+	at io.pedestal.interceptor.chain$enter_all.invoke(chain.clj:229)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:379)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:389)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.http.impl.servlet_interceptor$interceptor_service_fn$fn__15776.invoke(servlet_interceptor.clj:351)
+	at io.pedestal.http.servlet.FnServlet.service(servlet.clj:28)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:873)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:542)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1345)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:480)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1247)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:505)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:370)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:267)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:698)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:804)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: java.lang.Integer cannot be cast to clojure.lang.IFn
+	at bras_cubas.service$get_json.invokeStatic(service.clj:23)
+	at bras_cubas.service$get_json.invoke(service.clj:21)
+	at io.pedestal.interceptor$eval306$fn__307$fn__308.invoke(interceptor.clj:41)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:54)
+	... 39 common frames omitted
+20:16:19.419 [qtp588497553-16] INFO  i.p.http.impl.servlet-interceptor  - {:msg "sending error", :message "Internal server error: exception", :line 215}
+20:25:31.345 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @7988ms to org.eclipse.jetty.util.log.Slf4jLog
+20:25:31.489 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_201-b09
+20:25:31.516 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@3af5f0da{/,null,AVAILABLE}
+20:25:31.530 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@7c089fbc{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+20:25:31.530 [main] INFO  org.eclipse.jetty.server.Server  - Started @8175ms
+20:25:35.223 [qtp1756734333-16] INFO  io.pedestal.http  - {:msg "GET /json", :line 80}
