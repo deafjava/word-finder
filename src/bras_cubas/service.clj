@@ -1,33 +1,42 @@
 (ns bras-cubas.service
   (:require [io.pedestal.http :as http]
             [io.pedestal.http.route :as route]
-            [clojure.java.io :as io]
+            [clojure.java.jdbc :as sql]
             [io.pedestal.http.body-params :as body-params]
             [ring.util.response :as ring-resp]))
 
 
 
+(def db {:dbtype   "mysql"
+         :dbname   "literature"
+         :host     "10.0.0.109"
+         :port     "3307"
+         :user     "root"
+         :password "d4t4b4s3"})
 
-(defn about-page
+(defn get-book [id]
+  (sql/query db [(str "select content from book where id = " id)] {:row-fn :content}))
+
+
+(defn get-book-ids []
+  (sql/query db ["select id, title from book"]))
+
+(defn list-books
   [request]
-  (ring-resp/response (format "Clojure %s - served from %s"
-                              (clojure-version)
-                              (route/url-for ::about-page))))
+  (ring-resp/response (get-book-ids)))
 
-(def data-file (io/resource
-                 "memorias-postumas-bras-cubas.txt"))
 (defn find-word [word source]
   (->> source
        (re-seq (re-pattern word))
        count))
 
-(defn get-json
+(defn count-words-in-book
   [request]
-  (ring-resp/response {:total (find-word (get-in request [:query-params :w]) (slurp data-file))}))
+  (ring-resp/response {:total (find-word (get-in request [:query-params :w]) (nth (get-book (get-in request [:query-params :id])) 0))}))
 
 (defn home-page
   [request]
-  (ring-resp/response "Hello World!"))
+  (ring-resp/response "<html><body><h1>Word Researcher of Literature</h1></body></html>"))
 
 ;; Defines "/" and "/about" routes with their associated :get handlers.
 ;; The interceptors defined after the verb map (e.g., {:get home-page}
@@ -38,8 +47,8 @@
 
 ;; Tabular routes
 (def routes #{["/" :get (conj common-interceptors `home-page)]
-              ["/about" :get (conj common-interceptors `about-page)]
-              ["/json" :get (conj common-interceptors-json `get-json)]})
+              ["/list" :get (conj common-interceptors-json `list-books)]
+              ["/count" :get (conj common-interceptors-json `count-words-in-book)]})
 
 ;; Map-based routes
 ;(def routes `{"/" {:interceptors [(body-params/body-params) http/html-body]
