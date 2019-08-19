@@ -2,6 +2,7 @@
   (:require [io.pedestal.http :as http]
             [io.pedestal.http.route :as route]
             [clojure.java.jdbc :as sql]
+            [taoensso.faraday :as far]
             [io.pedestal.http.body-params :as body-params]
             [ring.util.response :as ring-resp]))
 
@@ -13,6 +14,12 @@
          :port     "3307"
          :user     "root"
          :password "d4t4b4s3"})
+
+(def dynamodb-client-opts {
+                           :access-key "key"
+                           :secret-key "key2"
+                           :endpoint   "http://10.0.0.109:8000"
+                           })
 
 (defn get-book [id]
   (sql/query db [(str "select content from book where id = " id)] {:row-fn :content}))
@@ -30,9 +37,13 @@
        (re-seq (re-pattern word))
        count))
 
+(defn research-dynamodb-first [id word]
+  (far/get-item dynamodb-client-opts :researched-words-literature {:id id, :word word}))
+
 (defn count-words-in-book
   [request]
-  (ring-resp/response {:total (find-word (get-in request [:query-params :w]) (nth (get-book (get-in request [:query-params :id])) 0))}))
+  (let [word (get-in request [:query-params :w]) id (get-in request [:query-params :id])]
+    (ring-resp/response {:total (get (research-dynamodb-first id word) (find-word word (nth (get-book id) 0)))})))
 
 (defn home-page
   [request]

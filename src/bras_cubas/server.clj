@@ -3,6 +3,7 @@
   (:require [io.pedestal.http :as server]
             [io.pedestal.http.route :as route]
             [clj-dbcp.core        :as liqui-cp]
+            [taoensso.faraday :as far]
             [clj-liquibase.cli    :as liqui-cli]
             [bras-cubas.service :as service])
   (:use
@@ -19,6 +20,14 @@
                   :database "literature"
                   :user "root"
                   :password "d4t4b4s3"}))
+
+(def dynamodb-client-opts {
+                           :access-key "key"
+                           :secret-key "key2"
+                           :endpoint   "http://10.0.0.109:8000"
+                           })
+
+
 
 ;; This is an adapted service map, that can be started and stopped
 ;; From the REPL you can call server/start and server/stop on this service
@@ -50,6 +59,14 @@
   [& args]
   (println "\nRunning Liquibase...")
   (apply liqui-cli/entry "update" {:datasource ds :changelog  app-changelog} args)
+  (far/create-table dynamodb-client-opts :researched-words-literature
+                    [:id :n
+                     :word :s
+                     :total :n
+                     ]
+                    {:throughput {:read 1 :write 1} ; Read & write capacity (units/sec)
+                     :block? true ; Block thread during table creation
+                     })
   (println "\nCreating your server...")
   (server/start runnable-service))
 

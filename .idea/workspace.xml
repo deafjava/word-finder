@@ -4,6 +4,7 @@
     <list default="true" id="47c628fb-b2b0-43c0-944a-1b1eef5208eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.clj" beforeDir="false" afterPath="$PROJECT_DIR$/project.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bras_cubas/server.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/bras_cubas/server.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bras_cubas/service.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/bras_cubas/service.clj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
