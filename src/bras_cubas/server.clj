@@ -15,7 +15,7 @@
 
 (def ds (liqui-cp/make-datasource
           :mysql {
-                  :host "10.0.0.109"
+                  :host "localhost"
                   :port "3307"
                   :database "literature"
                   :user "root"
@@ -24,7 +24,7 @@
 (def dynamodb-client-opts {
                            :access-key "key"
                            :secret-key "key2"
-                           :endpoint   "http://10.0.0.109:8000"
+                           :endpoint   "http://localhost:8000"
                            })
 
 
