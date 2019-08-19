@@ -1,0 +1,26 @@
+{:database-change-log
+ [{:change-set
+   {:id "Populate Books to the Database"
+    :author "Caio Cascaes"
+    :changes [{:create-table {:table-name "book"
+                              :columns [{:column {:name "id"   :type "int" :auto-increment true :constraints {:primary-key? true
+                                                                                                              :nullable?    false}}}
+                                        {:column {:name "title" :type "varchar(40)" :constraints {:nullable? false}}}
+                                        {:column {:name "author" :type "varchar(40)" :constraints {:nullable? false}}}
+                                        {:column {:name "language" :type "char(2)" :constraints {:nullable? false}}}
+                                        {:column {:name "country" :type "char(2)" :constraints {:nullable? false}}}
+                                        {:column {:name "content" :type "text"   :constraints {:nullable? false}}}]}}
+              {:load-data {
+                           :columns [
+                                     {:column {:header "title" :name "title"}}
+                                     {:column {:header "author" :name "author"}}
+                                     {:column {:header "language" :name "language"}}
+                                     {:column {:header "country" :name "country"}}
+                                     {:column {:header "content" :name "content"}}]
+                           :file "memorias-postumas-bras-cubas.csv"
+                           :separator ","
+                           :quotchar "`"
+                           :table-name "book"}}
+              ]}
+   }
+]}

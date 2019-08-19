@@ -1,8 +1,24 @@
 (ns bras-cubas.server
-  (:gen-class) ; for -main method in uberjar
+  (:gen-class)
   (:require [io.pedestal.http :as server]
             [io.pedestal.http.route :as route]
-            [bras-cubas.service :as service]))
+            [clj-dbcp.core        :as liqui-cp]
+            [clj-liquibase.cli    :as liqui-cli]
+            [bras-cubas.service :as service])
+  (:use
+    [clj-liquibase.core :refer (defparser)]))
+
+
+
+(defparser app-changelog "changelog.edn")
+
+(def ds (liqui-cp/make-datasource
+          :mysql {
+                  :host "10.0.0.109"
+                  :port "3307"
+                  :database "literature"
+                  :user "root"
+                  :password "d4t4b4s3"}))
 
 ;; This is an adapted service map, that can be started and stopped
 ;; From the REPL you can call server/start and server/stop on this service
@@ -32,6 +48,8 @@
 (defn -main
   "The entry-point for 'lein run'"
   [& args]
+  (println "\nRunning Liquibase...")
+  (apply liqui-cli/entry "update" {:datasource ds :changelog  app-changelog} args)
   (println "\nCreating your server...")
   (server/start runnable-service))
 

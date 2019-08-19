@@ -11,7 +11,9 @@
                  [io.pedestal/pedestal.jetty "0.5.7"]
                  ;; [io.pedestal/pedestal.immutant "0.5.7"]
                  ;; [io.pedestal/pedestal.tomcat "0.5.7"]
-
+                 [clj-dbcp      "0.8.1"]  ; to create connection-pooling DataSource
+                 [clj-liquibase "0.6.0"]  ; for this library
+                 [oss-jdbc      "0.8.0"]  ; for Open Source JDBC drivers
                  [ch.qos.logback/logback-classic "1.2.3" :exclusions [org.slf4j/slf4j-api]]
                  [org.slf4j/jul-to-slf4j "1.7.26"]
                  [org.slf4j/jcl-over-slf4j "1.7.26"]

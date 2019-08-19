@@ -5,6 +5,9 @@
             [io.pedestal.http.body-params :as body-params]
             [ring.util.response :as ring-resp]))
 
+
+
+
 (defn about-page
   [request]
   (ring-resp/response (format "Clojure %s - served from %s"
@@ -12,15 +15,15 @@
                               (route/url-for ::about-page))))
 
 (def data-file (io/resource
-                 "memorias-postumas-bras-cubas.txt"))
-(defn find-word [string]
-  (->> string
-       (re-seq #"espero")
+                 "memorias-postumas-bras-cubas.csv"))
+(defn find-word [word source]
+  (->> source
+       (re-seq (re-pattern word))
        count))
 
 (defn get-json
   [request]
-  (ring-resp/response {:total (find-word (slurp data-file))}))
+  (ring-resp/response {:total (find-word (get-in request [:query-params :w]) (slurp data-file))}))
 
 (defn home-page
   [request]
