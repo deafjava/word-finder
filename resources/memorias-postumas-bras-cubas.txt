@@ -1,5 +1,4 @@
-`title`,`author`,`language`,`country`,`content`
-`Memórias Póstumas de Brás Cubas`,`Machado de Assis`,`PT`,`BR`,`Memórias Póstumas de Brás Cubas
+Memórias Póstumas de Brás Cubas
 
 
 Texto-fonte: 
@@ -7912,4 +7911,5 @@ negativa deste capítulo de negativas: — Não tive filhos, não transmiti
 a nenhuma criatura o legado da nossa miséria. 
 
 
-FIM`
+FIM
+

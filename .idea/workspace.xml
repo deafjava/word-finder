@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47c628fb-b2b0-43c0-944a-1b1eef5208eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/changelog.edn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/dom-casmurro.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/la-chanson-de-roland.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/macbeth.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_dropwizard_metrics_metrics_jmx_4_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__io_dropwizard_metrics_metrics_jmx_4_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/changelog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/changelog.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bras-cubas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bras-cubas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.clj" beforeDir="false" afterPath="$PROJECT_DIR$/project.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/memorias-postumas-bras-cubas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/memorias-postumas-bras-cubas.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bras_cubas/server.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/bras_cubas/server.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/changelog.edn" beforeDir="false" afterPath="$PROJECT_DIR$/resources/changelog.edn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/memorias-postumas-bras-cubas.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/memorias-postumas-bras-cubas.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bras_cubas/service.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/bras_cubas/service.clj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +27,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

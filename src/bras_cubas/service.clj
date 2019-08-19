@@ -15,7 +15,7 @@
                               (route/url-for ::about-page))))
 
 (def data-file (io/resource
-                 "memorias-postumas-bras-cubas.csv"))
+                 "memorias-postumas-bras-cubas.txt"))
 (defn find-word [word source]
   (->> source
        (re-seq (re-pattern word))

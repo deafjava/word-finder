@@ -1,26 +1,75 @@
 {:database-change-log
  [{:change-set
-   {:id "Populate Books to the Database"
-    :author "Caio Cascaes"
+   {:id      "CreateTableBook"
+    :author  "Caio Cascaes"
     :changes [{:create-table {:table-name "book"
-                              :columns [{:column {:name "id"   :type "int" :auto-increment true :constraints {:primary-key? true
-                                                                                                              :nullable?    false}}}
-                                        {:column {:name "title" :type "varchar(40)" :constraints {:nullable? false}}}
-                                        {:column {:name "author" :type "varchar(40)" :constraints {:nullable? false}}}
-                                        {:column {:name "language" :type "char(2)" :constraints {:nullable? false}}}
-                                        {:column {:name "country" :type "char(2)" :constraints {:nullable? false}}}
-                                        {:column {:name "content" :type "text"   :constraints {:nullable? false}}}]}}
-              {:load-data {
-                           :columns [
-                                     {:column {:header "title" :name "title"}}
-                                     {:column {:header "author" :name "author"}}
-                                     {:column {:header "language" :name "language"}}
-                                     {:column {:header "country" :name "country"}}
-                                     {:column {:header "content" :name "content"}}]
-                           :file "memorias-postumas-bras-cubas.csv"
-                           :separator ","
-                           :quotchar "`"
-                           :table-name "book"}}
+                              :columns    [{:column {:name "id" :type "int" :auto-increment true :constraints {:primary-key? true
+                                                                                                               :nullable?    false}}}
+                                           {:column {:name "title" :type "varchar(40)" :constraints {:nullable? false}}}
+                                           {:column {:name "author" :type "varchar(40)" :constraints {:nullable? false}}}
+                                           {:column {:name "language" :type "char(2)" :constraints {:nullable? false}}}
+                                           {:column {:name "country" :type "char(2)" :constraints {:nullable? false}}}
+                                           {:column {:name "content" :type "clob" :constraints {:nullable? false}}}]}}
               ]}
    }
-]}
+  {"changeSet"
+   {"id"      "PopulateBooksToTheTableBook"
+    "author"  "Caio Cascaes"
+    "changes" [{"insert" {
+                          "tableName" "book"
+                          "columns"   [{"column" {"name"  "title"
+                                                  "value" "Memórias Póstumas de Brás Cubas"}}
+                                       {"column" {"name"  "author"
+                                                  "value" "Machado de Assis"}}
+                                       {"column" {"name"  "language"
+                                                  "value" "PT"}}
+                                       {"column" {"name"  "country"
+                                                  "value" "BR"}}
+                                       {"column" {"name"          "content"
+                                                  "valueBlobFile" "resources/memorias-postumas-bras-cubas.txt"}}
+                                       ]
+                          }}
+               {"insert" {
+                          "tableName" "book"
+                          "columns"   [{"column" {"name"  "title"
+                                                  "value" "Dom Casmurro"}}
+                                       {"column" {"name"  "author"
+                                                  "value" "Machado de Assis"}}
+                                       {"column" {"name"  "language"
+                                                  "value" "PT"}}
+                                       {"column" {"name"  "country"
+                                                  "value" "BR"}}
+                                       {"column" {"name"          "content"
+                                                  "valueBlobFile" "resources/dom-casmurro.txt"}}
+                                       ]
+                          }}
+               {"insert" {
+                          "tableName" "book"
+                          "columns"   [{"column" {"name"  "title"
+                                                  "value" "MacBeth"}}
+                                       {"column" {"name"  "author"
+                                                  "value" "William Shakespeare"}}
+                                       {"column" {"name"  "language"
+                                                  "value" "EN"}}
+                                       {"column" {"name"  "country"
+                                                  "value" "UK"}}
+                                       {"column" {"name"          "content"
+                                                  "valueBlobFile" "resources/macbeth.txt"}}
+                                       ]
+                          }}
+               {"insert" {
+                          "tableName" "book"
+                          "columns"   [{"column" {"name"  "title"
+                                                  "value" "La Chanson de Roland"}}
+                                       {"column" {"name"  "author"
+                                                  "value" "Leon Gautier"}}
+                                       {"column" {"name"  "language"
+                                                  "value" "FR"}}
+                                       {"column" {"name"  "country"
+                                                  "value" "FR"}}
+                                       {"column" {"name"          "content"
+                                                  "valueBlobFile" "resources/la-chanson-de-roland.txt"}}
+                                       ]
+                          }}
+               ]}}]
+ }
